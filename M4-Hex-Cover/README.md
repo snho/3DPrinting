@@ -28,9 +28,9 @@ The "stem" that fits in the screw head is sized a bit larger as it is **friction
 
 ## Removal / Accidents Happen
 
-If you require access to the screw to disassemble the furniture or the "head" of the cover snaps off for whatever reason, them remaining stem can be removed. I've "developed" a method to remove it.
+If you require access to the screw to disassemble the furniture or the "head" of the cover snaps off for whatever reason, the remaining stem can be removed. I've "developed" a method to remove it.
 
-To remove the stuck stem, I heated a thin metal object (such as a small screw driver) that could be inserted into the plastic and bed itself in it - at and angle helps. You can then simply pry/pull the plastic without damaging the screw and the finish furniture.
+To remove the stuck stem, I heated a thin metal object (such as a small screw driver) that could be inserted into the plastic and bed itself in it - at and angle helps. You can then simply pry/pull the plastic without damaging the screw and the finish of the furniture.
 
 ![alt text][removal-photo]
 
