@@ -6,10 +6,12 @@ This 3D model avaialble to print, is a simple cover to prevent the screw heads f
 
 The colour is dependent on your filament obviously, but you can play around with it to find fun contrasts to suit your decor or simply just match it. 
 
+![alt text][uncovered-photo]
+
+![alt text][covered-photo]
+
 **NOTE**: I'm not to sure whether IKEA uses M5 or bigger/smaller hex screws for their furniture, but this design should be adapted easily by simply scaling it.
 
-![alt text][uncovered-photo]
-![alt text][covered-photo]
 
 ## Install / Assembly Instructions
 
@@ -33,6 +35,6 @@ To remove the stuck stem, I heated a thin metal object (such as a small screw dr
 ![alt text][removal-photo]
 
 [1]: http://www.ikea.com/au/en/catalog/categories/series/27534/
-[removal-photo]: https://github.com/snho/3DPrinting/raw/master/m4HexCover/images/Hex-Cover-Kaput "Removal photo"
-[uncovered-photo]: https://github.com/snho/3DPrinting/raw/master/m4HexCover/images/Hex-Cover-Uncovered "Bare hex screw visible" 
-[covered-photo]: https://github.com/snho/3DPrinting/raw/master/m4HexCover/images/Hex-Cover-Covered "Hex screw no longer visible under the hex cover"
+[removal-photo]: https://github.com/snho/3DPrinting/raw/master/M4-Hex-Cover/images/Hex-Cover-Kaput.JPG "Removal photo"
+[uncovered-photo]: https://github.com/snho/3DPrinting/raw/master/M4-Hex-Cover/images/Hex-Cover-Uncovered.JPG "Bare hex screw visible" 
+[covered-photo]: https://github.com/snho/3DPrinting/raw/master/M4-Hex-Cover/images/Hex-Cover-Covered.JPG "Hex screw no longer visible under the hex cover"
