@@ -23,7 +23,7 @@ My Printrbot is hooked up with a Raspberry Pi 2 running the excellent [OctoPrint
 
 
 [1]: https://printrbot.com/shop/simple-metal-kit/
-[2]: https://reprap.org/
-[3]: https://octoprint.org/
-[4]: https://print.thinh.com.au/
-[5]: https://www.bilby3d.com.au/
+[2]: http://reprap.org/
+[3]: http://octoprint.org/
+[4]: http://print.thinh.com.au/
+[5]: http://www.bilby3d.com.au/
