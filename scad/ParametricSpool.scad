@@ -5,7 +5,8 @@
 
 **/
 
-/** VARIABLES **/
+/* [Spool] */
+
 // Flange diameter of the spool
 FLANGE_DIAMETER = 50;
 // Inside diameter of the spool        
@@ -16,12 +17,18 @@ FLANGE_THICKNESS = 5;
 BARREL_THICKNESS = 5;
 // Traverse Length       
 TRAVERSE = 60;
+// Sides in a circle(the quality of the circle). Can result in non-circular shapes when the number of sides is small.       
+SIDES = 100;
+
+/* [Connection] */
+
 // Shaft Connector Length        
 CONNECTOR_LENGTH = 10;
-// Clearance for glue adhesion and fit       
+// Clearance for fit and glue       
 CONNECTOR_CLEARANCE = 1;
-// Print Quality - Sides in a circle. Can result in non-circular shapes when the number of sides is small.       
-SIDES = 100;
+
+/* [Hidden] */
+
 // Distance between models for printing male and female at the same time    
 MODEL_DISPLACEMENT = 10;
 
