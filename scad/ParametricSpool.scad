@@ -6,86 +6,86 @@
 **/
 
 /** VARIABLES **/
-// Outside flange diameter of the spool
-OD = 50;
+// Flange diameter of the spool
+FLANGE_DIAMETER = 50;
 // Inside diameter of the spool        
-ID = 10;
+INSIDE_DIAMETER = 10;
 // Outside Rim Thickness        
-ODRT = 5;
+FLANGE_THICKNESS = 5;
 // Inside shaft wall thickness       
-IDRT = 5;
-// Shaft Length       
-SL = 60;
+BARREL_THICKNESS = 5;
+// Traverse Length       
+TRAVERSE = 60;
 // Shaft Connector Length        
-SCL = 10;
-// Shaft Clearance for adhesion and fit       
-SCLR = 1;
-// Print Quality (Sides)       
+CONNECTOR_LENGTH = 10;
+// Clearance for glue adhesion and fit       
+CONNECTOR_CLEARANCE = 1;
+// Print Quality - Sides in a circle. Can result in non-circular shapes when the number of sides is small.       
 SIDES = 100;
-// Model Displacement (Distance between models for printing)    
-MDLDSP = 10;
+// Distance between models for printing male and female at the same time    
+MODEL_DISPLACEMENT = 10;
 
 /** MODULES **/
 
 module outerRim() {
-    linear_extrude(height = ODRT)
+    linear_extrude(height = FLANGE_THICKNESS)
     difference() {
         // Outer shape
-        circle(d = OD, $fn = SIDES);
+        circle(d = FLANGE_DIAMETER, $fn = SIDES);
         // Inner circle
-        circle(d = ID, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER, $fn = SIDES);
     }
 }
 
 module innerShaft() {
-    linear_extrude(height = SL)
+    linear_extrude(height = TRAVERSE)
     difference() {
         // Outer circle
-        circle(d = ID + IDRT, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER + BARREL_THICKNESS, $fn = SIDES);
         //Inner circle
-        circle(d = ID, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER, $fn = SIDES);
     }
 }
 
 module innerShaftMale() {
-    linear_extrude(height = (SL / 2) - SCL)
+    linear_extrude(height = (TRAVERSE / 2) - CONNECTOR_LENGTH)
     difference() {
         // Outer circle
-        circle(d = ID + IDRT, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER + BARREL_THICKNESS, $fn = SIDES);
         //Inner circle
-        circle(d = ID, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER, $fn = SIDES);
     }
-    translate([0, 0, (SL / 2) - SCL])
-    linear_extrude(height = SCL)
+    translate([0, 0, (TRAVERSE / 2) - CONNECTOR_LENGTH])
+    linear_extrude(height = CONNECTOR_LENGTH)
     difference() {
-        circle(d = (ID + IDRT / 2), $fn = SIDES);
-        circle(d = (ID), $fn = SIDES);
+        circle(d = (INSIDE_DIAMETER + BARREL_THICKNESS / 2), $fn = SIDES);
+        circle(d = (INSIDE_DIAMETER), $fn = SIDES);
     }
 }
 
 module innerShaftFemale() {
-    linear_extrude(height = (SL / 2) - SCL)
+    linear_extrude(height = (TRAVERSE / 2) - CONNECTOR_LENGTH)
     difference() {
         // Outer circle
-        circle(d = ID + IDRT, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER + BARREL_THICKNESS, $fn = SIDES);
         //Inner circle
-        circle(d = ID, $fn = SIDES);
+        circle(d = INSIDE_DIAMETER, $fn = SIDES);
     }
-    translate([0, 0, (SL / 2) - SCL])
-    linear_extrude(height = SCL)
+    translate([0, 0, (TRAVERSE / 2) - CONNECTOR_LENGTH])
+    linear_extrude(height = CONNECTOR_LENGTH)
     difference() {
-        circle(d = (ID + IDRT), $fn = SIDES);
-        circle(d = (ID + IDRT / 2), $fn = SIDES);
+        circle(d = (INSIDE_DIAMETER + BARREL_THICKNESS), $fn = SIDES);
+        circle(d = (INSIDE_DIAMETER + BARREL_THICKNESS / 2), $fn = SIDES);
     }
 }
 
 
 /** Printer/Render Ready Model **/
 outerRim();
-translate([0, 0, ODRT])
+translate([0, 0, FLANGE_THICKNESS])
 innerShaftMale();
-translate([OD + MDLDSP, 0, 0])
+translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, 0])
 outerRim();
-translate([OD + MDLDSP, 0, ODRT])
+translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, FLANGE_THICKNESS])
 innerShaftFemale();
 
