@@ -6,16 +6,24 @@
 **/
 
 /** VARIABLES **/
-
-OD = 50;        // Outside diameter of the spool
-ID = 10;        // Inside diameter of the spool
-ODRT = 5;       // Outside Rim Thickness
-IDRT = 5;       // Inside shaft wall thickness
-SL = 60;        // Shaft Length
-SCL = 10;       // Shaft Connector Length
-SCLR = 1;       // Shaft Clearance for adhesion and fit
-SIDES = 100;    // Print Quality (Sides)
-MDLDSP = 10;    // Model Displacement (Distance between models for printing)
+// Outside flange diameter of the spool
+OD = 50;
+// Inside diameter of the spool        
+ID = 10;
+// Outside Rim Thickness        
+ODRT = 5;
+// Inside shaft wall thickness       
+IDRT = 5;
+// Shaft Length       
+SL = 60;
+// Shaft Connector Length        
+SCL = 10;
+// Shaft Clearance for adhesion and fit       
+SCLR = 1;
+// Print Quality (Sides)       
+SIDES = 100;
+// Model Displacement (Distance between models for printing)    
+MDLDSP = 10;
 
 /** MODULES **/
 
