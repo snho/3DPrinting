@@ -89,13 +89,17 @@ module innerShaftFemale() {
     }
 }
 
-
 /** Printer/Render Ready Model **/
-outerRim();
-translate([0, 0, FLANGE_THICKNESS])
-innerShaftMale();
-translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, 0])
-outerRim();
-translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, FLANGE_THICKNESS])
-innerShaftFemale();
+module both() {
+    outerRim();
+    translate([0, 0, FLANGE_THICKNESS])
+    innerShaftMale();
+    translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, 0])
+    outerRim();
+    translate([FLANGE_DIAMETER + MODEL_DISPLACEMENT, 0, FLANGE_THICKNESS])
+    innerShaftFemale();
+}
+
+
+
 
