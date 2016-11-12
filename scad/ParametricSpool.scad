@@ -18,7 +18,7 @@ BARREL_THICKNESS = 5;
 // Traverse Length       
 TRAVERSE = 60;
 // Sides in a circle(the quality of the circle). Can result in non-circular shapes when the number of sides is small.       
-SIDES = 100;
+SIDES = 100; // [3:500]
 
 /* [Connection] */
 
@@ -26,6 +26,9 @@ SIDES = 100;
 CONNECTOR_LENGTH = 10;
 // Clearance for fit and glue       
 CONNECTOR_CLEARANCE = 1;
+
+/* [Output] */
+PART = "both"; // [male:Male Only, female: Female Only, both: Male and Female]
 
 /* [Hidden] */
 
