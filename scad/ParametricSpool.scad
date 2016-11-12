@@ -28,7 +28,8 @@ CONNECTOR_LENGTH = 10;
 CONNECTOR_CLEARANCE = 1;
 
 /* [Output] */
-PART = "both"; // [male:Male Only, female: Female Only, both: Male and Female]
+// Male, Female or Both Sections?
+PART = "both"; // [male:Male Section Only, female: Female Section Only, both: Male and Female Section]
 
 /* [Hidden] */
 
@@ -89,7 +90,8 @@ module innerShaftFemale() {
     }
 }
 
-/** Printer/Render Ready Model **/
+/** COMPLETE SECTION MODULES **/
+
 module both() {
     outerRim();
     translate([0, 0, FLANGE_THICKNESS])
@@ -110,4 +112,20 @@ module female() {
     outerRim();
     translate([0, 0, FLANGE_THICKNESS])
     innerShaftFemale();
+}
+
+/** PRINT PART **/
+
+print_part();
+
+module print_part() {
+    if (PART == "male") {
+        male();
+    } else if (PART == "female") {
+        female();
+    } else if (PART == "both") {
+        both();
+    } else {
+        both();
+    }
 }
