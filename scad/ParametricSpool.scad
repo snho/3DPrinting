@@ -100,6 +100,8 @@ module both() {
     innerShaftFemale();
 }
 
-
-
-
+module male() {
+    outerRim();
+    translate([0, 0, FLANGE_THICKNESS])
+    innerShaftMale();
+}
